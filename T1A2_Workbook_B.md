@@ -1,4 +1,4 @@
-# T1A1-Workbook
+# T1A2-Workbook
 ---
 
 ## Question 1: Identify and explain the workings of TWO sorting algorithms and discuss and compare their performance/efficiency (i.e. Big O)
@@ -260,14 +260,14 @@ Linear Search uses a single loop which compares the desired value with the eleme
 <br>
 
 <strong>Binary Search:</strong>
-Binary Search uses a single loop which halves the number of elements being searched after each iteration. The length of the array after ``k`` iterations is  ``n/2^k``, where ``n`` represents the length of the array and ``k`` represents the number of iterations.   The length of the array after ``k`` iterations is one, so we can set ``n/2^k=1``.  Now, we must solve for ``n`` by multiplying both sides by ``2^k`` leaving us with ``n=2^k``.  Now that we have them separated, we can apply log to both sides in order to eliminate the ``2`` and solve for ``k``, leaving us with ``k=log(n)``. The Big-O notation for binary search is ``O(log n)`` (logarithmic complexity).
+Binary Search uses a single loop which halves the number of elements being searched after each iteration. The length of the array after ``k`` iterations is  ``n/2^k``, where ``n`` represents the length of the array and ``k`` represents the number of iterations.   The length of the array after ``k`` iterations is one, so we can set ``n/2^k=1``.  Now, we must solve for ``n`` by multiplying both sides by ``2^k`` leaving us with ``n=2^k``.  Now that we have them separated, we can apply log to both sides in order to eliminate the ``2`` and solve for ``k``, leaving us with ``k=log(n)``. The Big-O notation for binary search is ``O(log(n))`` (logarithmic complexity).
 
 
 <br>
 
 <strong>*Conclusion:*</strong>
 
-Linear Search has linear complexity and Binary Search has logarithmic complexity. 
+Linear Search is has linear complexity which is less efficient than Binary Search's logarithmic complexity. 
 
 
  
