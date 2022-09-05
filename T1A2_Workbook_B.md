@@ -31,7 +31,10 @@ def bubble_sort(array):
 
 *Array: ``[12, 4 ,6 , 2, 8]``*
 
+<br>
+
 <strong>First iteration:</strong>
+
 The first iteration will start from the first index and proceed to the last. 
 
 1. The first two elements are compared. If the first element is larger than the second element, they will be swapped.  If the first element is smaller than the second element, it will move on to the next comparison. In this case, the first is greater and they were swapped. 
@@ -49,6 +52,7 @@ The first iteration will start from the first index and proceed to the last.
 <br>
 
 <strong>Second iteration:</strong>
+
 The process repeats, placing the next largest element at the end.
 
 1. The second and third elements are the only ones swapped during this iteration.
@@ -58,6 +62,7 @@ The process repeats, placing the next largest element at the end.
 <br>
 
 <strong>Remaining Iterations:</strong>
+
 The process repeats until the elements are in ascending order.
 
 <br>
@@ -136,11 +141,11 @@ The process repeats, ignoring the accurately swapped ``minimums`` as they are pl
 
 Bubble sort  has an inner and an outer loop which both need to iterate through ``n`` (size of list) number of times in the worst case. The outer loop varies as it has an escape that will stop the loop as soon as the array is sorted as intended.  This means that the outer loop has a worst case scenario of running O(n) amount of times and the best case scenario that it only needs to run once because the data was in the proper order to begin with. The inner loop performs O(n) times deterministically, so their is no variation. 
 
-This means that, in the worst case scenario, both loops carry the Big-O notation of O(n), which, when combined, come out to a run time of O(n^2) - quadratic complexity.
+This means that, in the worst case scenario, both loops carry the Big-O notation of O(n), which, when combined, come out to a run time of O(n^2) (quadratic complexity).
 
 ``O(n x n) = O(n^2)``
 
-This also means that the best case scenario in which the data is already sorted, the outer loop would run once O(1) and the inner loop would run O(n), which, when combined, come out to a run time of O(n) - linear complexity.
+This also means that the best case scenario in which the data is already sorted, the outer loop would run once O(1) and the inner loop would run O(n), which, when combined, come out to a run time of O(n)  (linear complexity).
 
 ``O(1 x n) = O(n)``
 
@@ -249,20 +254,20 @@ The middle number of the remaining values is found through the equation (1+2)//2
 
 <strong>Linear Search:</strong>
 
-Linear Search uses a single loop which compares the desired value with the elements within the loop.  The loop stops when the desired value matches one of the elements within the loop.  In the best case scenario, the desired value could match the first element, so that the loop would only have to iterate once. Worst case scenario, the desired value matches the final element in the array, meaning the loop would have to iterate ``n`` (the amount of elements in the array) times. Since Linear Search uses a loop with the possibility of ``n`` iterations, we would say it has the Big-O notation of ``O(n)`` - linear complexity.
+Linear Search uses a single loop which compares the desired value with the elements within the loop.  The loop stops when the desired value matches one of the elements within the loop.  In the best case scenario, the desired value could match the first element, so that the loop would only have to iterate once. Worst case scenario, the desired value matches the final element in the array, meaning the loop would have to iterate ``n`` (the amount of elements in the array) times. Since Linear Search uses a loop with the possibility of ``n`` iterations, we would say it has the Big-O notation of ``O(n)``  (linear complexity).
 
 
 <br>
 
 <strong>Binary Search:</strong>
-Binary Search uses a single loop which halves the number of elements being searched after each iteration. The length of the array after ``k`` iterations is  ``n/2^k``, where ``n`` represents the length of the array and ``k`` represents the number of iterations.   The length of the array after ``k`` iterations is one, so we can set ``n/2^k=1``.  Now, we must solve for ``n`` by multiplying both sides by ``2^k`` leaving us with ``n=2^k``.  Now that we have them separated, we can apply log to both sides in order to eliminate the ``2`` and solve for ``k``, leaving us with ``k=log(n)``. The Big-O notation for binary search is ``O(log n)`` - logarithmic complexity.
+Binary Search uses a single loop which halves the number of elements being searched after each iteration. The length of the array after ``k`` iterations is  ``n/2^k``, where ``n`` represents the length of the array and ``k`` represents the number of iterations.   The length of the array after ``k`` iterations is one, so we can set ``n/2^k=1``.  Now, we must solve for ``n`` by multiplying both sides by ``2^k`` leaving us with ``n=2^k``.  Now that we have them separated, we can apply log to both sides in order to eliminate the ``2`` and solve for ``k``, leaving us with ``k=log(n)``. The Big-O notation for binary search is ``O(log n)`` (logarithmic complexity).
 
 
 <br>
 
 <strong>*Conclusion:*</strong>
 
-Linear Search had linear complexity and Binary Search has logarithmic complexity. 
+Linear Search has linear complexity and Binary Search has logarithmic complexity. 
 
 
-Bubble Sort and Selection Sort have the same average Big-O complexity, O(n^2).  Despite this, Selection Sort is still more efficient due to the fact that there are far more swapping operations in Bubble Sort.  Selection Sort only swaps once per iteration while Bubble Sort typically swaps multiple times per iteration. 
+ 
