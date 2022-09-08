@@ -9,6 +9,8 @@
 ### Overview:
 The Bubble Sort algorithm is one of the more basic of the common sorting algorithms. It takes the iterative approach and loops through the array while comparing the adjacent elements within the array. Through each iteration it swaps adjacent elements up until the last sorted element from the previous iteration. It will iterate through the array as many times as it takes for nothing to be changed, which means that the elements have been sorted into the intended order.  
 
+<br> 
+
 ```
 def bubble_sort(array):
         n = len(array)
@@ -27,6 +29,7 @@ def bubble_sort(array):
                 break
         return array
 ```
+(Real Python)
 
 <br> 
 
@@ -82,6 +85,8 @@ The process repeats until the elements are in ascending order.
 ### Overview:
 The Selection Sort Algorithm is another basic sorting algorithm.  Like the Bubble Sort Algorithm, it too takes the iterative approach.  Through each iteration, it moves the smallest element to the beginning of the list. It starts by setting the first element in the list as the ``minimum``. It then compares the ``minimum`` to each element in the list until it finds one smaller.  When it finds a smaller element, that element is considered the new ``minimum``, and it continues this process until it has compared all of the elements.  Once the iteration is complete, the final ``minimum`` will be the smallest number in the array, and that number will be moved to the front. This process repeats until the numbers are in the desired order. 
 
+<br> 
+
 ```
 def selectionSort(array, size):
     for step in range(size):
@@ -95,6 +100,10 @@ def selectionSort(array, size):
 # set size equal to length of the data        
 size = len(data)
 ```
+(Programiz)
+
+<br> 
+
 ### Example:
 
 *Goal: Sort the array in ascending order.*
@@ -180,7 +189,9 @@ Bubble Sort and Selection Sort have the same average Big-O complexity, O(n^2).  
 
 ### <strong>Linear Search Algorithm:</strong>  
 ### Overview:
-The linear search algorithm is an incredibly simple search algorithm. The linear search algorithm works by traversing an entire array until the desired element is found.  Once it is found, the location of the element is returned.  If no match for the element is found, the algorithm returns -1.  This algorithm does not require the array to be sorted beforehand due to it comparing the desired element to each item one by one.
+The Linear Search algorithm is an incredibly simple search algorithm. The Linear Search algorithm works by traversing an entire array until the desired element is found.  Once it is found, the location of the element is returned.  If no match for the element is found, the algorithm returns -1.  This algorithm does not require the array to be sorted beforehand due to it comparing the desired element to each item one by one.
+
+<br> 
 
 ```
 def search(arr, x):
@@ -192,6 +203,10 @@ def search(arr, x):
     # return -1 if they don't
     return -1
 ```
+(GeeksforGeeks)
+
+<br> 
+
 ### Example:
 *Goal: Find the index for the value ``6`` in the following array.*
 
@@ -221,8 +236,9 @@ The value ``6`` is compared to the value ``6``.  These values do match, so the l
 ### Overview:
 The Binary Search Algorithm is another simple search algorithm. Unlike the Linear Search algorithm, it requires the list to be sorted beforehand.  It works by immediately disregarding half of the list during the first iteration of the loop. It does so by comparing the desired value with the middle element of the list. First, it creates the variables ``low``, ``high``, and ``mid``, setting them to ``0``, the ``final element value``, and ``0``, respectively. If the middle element matches, it returns the middle element.  If the middle element does not match, it checks to see whether the desired value is larger or smaller than the middle element.  If it is larger, then we know it is in the second half and a new low is created.  If it is smaller, then we know it is in the first half and a new high is created. This process is repeated until the desired value equals ``mid``.  If the desired value is not found, the function returns ``-1``.
 
-```
+<br> 
 
+```
 def binary_search(arr, x):
     low = 0
     high = len(arr) - 1
@@ -242,6 +258,9 @@ def binary_search(arr, x):
     # return -1 if there is not a match
     return -1
 ```
+(GeeksforGeeks)
+
+<br> 
 
 ### Example:
 *Goal: Find the index for the value ``4`` in the following array.*
@@ -289,17 +308,20 @@ Linear Search has linear complexity which is less efficient than Binary Search's
 
  ### Question 1:
 
-Bubble Sort (With Code in Python/C++/Java/C). www.programiz.com/dsa/bubble-sort. Accessed 4 Sept. 2022. 
+Bubble Sort (With Code in Python/C++/Java/C). http://www.programiz.com/dsa/bubble-sort. Accessed 4 Sept. 2022. 
 
-Real Python. Sorting Algorithms in Python. 1 Sept. 2022, realpython.com/sorting-algorithms-python/. Accessed 4 Sept. 2022.
+Real Python. Sorting Algorithms in Python. 1 Sept. 2022, http://realpython.com/sorting-algorithms-python/. Accessed 4 Sept. 2022.
 
 
-Selection Sort (With Code in Python/C++/Java/C). www.programiz.com/dsa/selection-sort. Accessed 4 Sept. 2022.
+Selection Sort (With Code in Python/C++/Java/C). http://www.programiz.com/dsa/selection-sort. Accessed 4 Sept. 2022.
 
  ### Question 2:
 
-GeeksforGeeks. “Linear Search Vs Binary Search.” GeeksforGeeks, 4 Aug. 2022, www.geeksforgeeks.org/linear-search-vs-binary-search/. Accessed 8 Sept. 2022.
+GeeksforGeeks. “Linear Search Vs Binary Search.” GeeksforGeeks, 4 Aug. 2022, http://www.geeksforgeeks.org/linear-search-vs-binary-search/. Accessed 8 Sept. 2022.
 
-GeeksforGeeks. “Searching Algorithms.” GeeksforGeeks, www.geeksforgeeks.org/searching-algorithms/?ref=lbp. Accessed 8 Sept. 2022. 
+GeeksforGeeks. “Searching Algorithms.” GeeksforGeeks, http://www.geeksforgeeks.org/python-program-for-binary-search/. Accessed 8 Sept. 2022. 
 
-Real Python. How to Do a Binary Search in Python. https://realpython.com/binary-search-python/. Accessed 8 Sept. 2022.
+GeeksforGeeks. “Python Program for Linear Search.” GeeksforGeeks, 4 Aug. 2022, http://www.geeksforgeeks.org/python-program-for-linear-search/. Accessed 8 Sept. 2022.
+
+Real Python. How to Do a Binary Search in Python. http://realpython.com/binary-search-python/. Accessed 8 Sept. 2022.
+
