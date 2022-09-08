@@ -291,7 +291,7 @@ Linear Search has linear complexity which is less efficient than Binary Search's
 
 Bubble Sort (With Code in Python/C++/Java/C). www.programiz.com/dsa/bubble-sort. Accessed 4 Sept. 2022. 
 
-Real Python. Sorting Algorithms in Python. 1 Sept. 2022, realpython.com/sorting-algorithms-python. 
+Real Python. Sorting Algorithms in Python. 1 Sept. 2022, realpython.com/sorting-algorithms-python/. Accessed 4 Sept. 2022.
 
 
 Selection Sort (With Code in Python/C++/Java/C). www.programiz.com/dsa/selection-sort. Accessed 4 Sept. 2022.
