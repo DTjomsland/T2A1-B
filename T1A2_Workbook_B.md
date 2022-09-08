@@ -13,11 +13,16 @@ The Bubble Sort algorithm is one of the more basic of the common sorting algorit
 def bubble_sort(array):
         n = len(array)
         for i in range(n):
+        # allows the function to end if there is nothing left to sort
             already_sorted = True
+            # searches through each item in the list and compares it with the adjacent value.  
             for j in range(n - i - 1):
                 if array[j] > array[j + 1]:
+                    # Swap if the item is larger than the adjacent value
                     array[j], array[j + 1] = array[j + 1], array[j]
+                    # if elements are swapped set to false so it continues sorting.
                     already_sorted = False
+            # if there were no swaps, the loop is stopped.
             if already_sorted:
                 break
         return array
@@ -75,18 +80,20 @@ The process repeats until the elements are in ascending order.
 ### <strong>Selection Sort Algorithm:</strong>       
 
 ### Overview:
-The Selection Sort Algorithm is another basic sorting algorithm.  Like the Bubble Sort Algorithm, it too takes the iterative approach.  Through each iteration, it moves the smallest element to the beginning of the list. It starts by setting the first element in the list as the ``minimum``. It then compares the ``minimum`` to each element in the list until it finds one smaller.  When it finds a smaller element, that element is considered the new ``minimum``, and it continues this process until it has compared all of the elements.  Once the iteration is complete, the final ``minimum`` will be the smallest number in the array, and that number will be moved to the front. This process repeats until the numbers are in the desired ordered. 
+The Selection Sort Algorithm is another basic sorting algorithm.  Like the Bubble Sort Algorithm, it too takes the iterative approach.  Through each iteration, it moves the smallest element to the beginning of the list. It starts by setting the first element in the list as the ``minimum``. It then compares the ``minimum`` to each element in the list until it finds one smaller.  When it finds a smaller element, that element is considered the new ``minimum``, and it continues this process until it has compared all of the elements.  Once the iteration is complete, the final ``minimum`` will be the smallest number in the array, and that number will be moved to the front. This process repeats until the numbers are in the desired order. 
 
 ```
-def insertion_sort(array):
-    for i in range(1, len(array)):
-        key_item = array[i]
-        j = i - 1
-        while j >= 0 and array[j] > key_item:
-            array[j + 1] = array[j]
-            j -= 1
-        array[j + 1] = key_item
-    return array
+def selectionSort(array, size):
+    for step in range(size):
+        min_idx = step
+        for i in range(step + 1, size):
+            # select the minimum element
+            if array[i] < array[min_idx]:
+                min_idx = i
+        # put the minimum at the correct position
+        (array[step], array[min_idx]) = (array[min_idx], array[step])
+# set size equal to length of the data        
+size = len(data)
 ```
 ### Example:
 
@@ -95,7 +102,7 @@ def insertion_sort(array):
 *Array: ``[12, 4, 6, 2, 8]``*
 
 <strong>First Iteration:</strong>
-The first iteration will set the ``minimum`` as the first element and compare it until it finds a smaller element. Every time is finds a smaller element, it sets that as the new ``minimum`` until it has finished the iteration.  The final ``minimum`` for the iteration is then swapped with the first element in the set.
+The first iteration will set the ``minimum`` as the first element and compare it until it finds a smaller element. Every time it finds a smaller element, it sets that as the new ``minimum`` until it has finished the iteration.  The final ``minimum`` for the iteration is then swapped with the first element in the set.
 
 *``Minimum`` in white.*
 
@@ -139,9 +146,9 @@ The process repeats, ignoring the accurately swapped ``minimums`` as they are pl
 
 <strong>Bubble Sort:</strong>
 
-Bubble sort  has an inner and an outer loop which both need to iterate through ``n`` (size of list) number of times in the worst case. The outer loop varies as it has an escape that will stop the loop as soon as the array is sorted as intended.  This means that the outer loop has a worst case scenario of running O(n) amount of times and the best case scenario that it only needs to run once because the data was in the proper order to begin with. The inner loop performs O(n) times deterministically, so their is no variation. 
+Bubble sort  has an inner and an outer loop which both need to iterate through ``n`` (size of list) number of times in the worst case. The outer loop varies as it has an escape that will stop the loop as soon as the array is sorted as intended.  This means that the outer loop has a worst case scenario of running O(n) amount of times and the best case scenario that it only needs to run once because the data was in the proper order to begin with. The inner loop performs O(n) times deterministically, so there is no variation. 
 
-This means that, in the worst case scenario, both loops carry the Big-O notation of O(n), which, when combined, come out to a run time of O(n^2) (quadratic complexity).
+This means that in the worst case scenario, both loops carry the Big-O notation of O(n).  When these are combined they come out to a big-O of O(n^2) (quadratic complexity).
 
 ``O(n x n) = O(n^2)``
 
@@ -178,8 +185,11 @@ The linear search algorithm is an incredibly simple search algorithm. The linear
 ```
 def search(arr, x):
     for i in range(len(arr)):
+        # check if any items in the array equal x
         if arr[i] == x:
+            # return them if they do
             return i
+    # return -1 if they don't
     return -1
 ```
 ### Example:
@@ -218,13 +228,18 @@ def binary_search(arr, x):
     high = len(arr) - 1
     mid = 0
     while low <= high:
+        # find the middle index
         mid = (high + low) // 2
+        # ignore the first half if x is greater
         if arr[mid] < x:
             low = mid + 1
+        # ignore the second half if x is smaller
         elif arr[mid] > x:
             high = mid - 1
+        # return the index if x is present at mid
         else:
             return mid
+    # return -1 if there is not a match
     return -1
 ```
 
@@ -267,7 +282,24 @@ Binary Search uses a single loop which halves the number of elements being searc
 
 <strong>*Conclusion:*</strong>
 
-Linear Search is has linear complexity which is less efficient than Binary Search's logarithmic complexity. 
+Linear Search has linear complexity which is less efficient than Binary Search's logarithmic complexity. If the amount of items being searched is doubled, Linear Search would take twice as long to complete since it needs to possibly go through the entire list. However, in Binary Search, the amount being searched is halved after every loop, so it stays efficient even when more data is added.  A major perk to using Linear Search is that the list does nto have to be sorted in order for it to work, unlike Binary Search.
 
 
- 
+ ## Works Cited:
+
+ ### Question 1:
+
+Bubble Sort (With Code in Python/C++/Java/C). www.programiz.com/dsa/bubble-sort. Accessed 4 Sept. 2022. 
+
+Real Python. Sorting Algorithms in Python. 1 Sept. 2022, realpython.com/sorting-algorithms-python. 
+
+
+Selection Sort (With Code in Python/C++/Java/C). www.programiz.com/dsa/selection-sort. Accessed 4 Sept. 2022.
+
+ ### Question 2:
+
+GeeksforGeeks. “Linear Search Vs Binary Search.” GeeksforGeeks, 4 Aug. 2022, www.geeksforgeeks.org/linear-search-vs-binary-search. 
+
+GeeksforGeeks. “Searching Algorithms.” GeeksforGeeks, www.geeksforgeeks.org/searching-algorithms/?ref=lbp. Accessed 8 Sept. 2022. 
+
+Real Python. How to Do a Binary Search in Python. https://realpython.com/binary-search-python/. Accessed 8 Sept. 2022.
