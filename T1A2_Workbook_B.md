@@ -13,7 +13,7 @@ The Bubble Sort algorithm is one of the more basic of the common sorting algorit
 def bubble_sort(array):
         n = len(array)
         for i in range(n):
-        # allows the function to end if there is nothing left to sort
+            # allows the function to end if there is nothing left to sort
             already_sorted = True
             # searches through each item in the list and compares it with the adjacent value.  
             for j in range(n - i - 1):
@@ -298,7 +298,7 @@ Selection Sort (With Code in Python/C++/Java/C). www.programiz.com/dsa/selection
 
  ### Question 2:
 
-GeeksforGeeks. “Linear Search Vs Binary Search.” GeeksforGeeks, 4 Aug. 2022, www.geeksforgeeks.org/linear-search-vs-binary-search. 
+GeeksforGeeks. “Linear Search Vs Binary Search.” GeeksforGeeks, 4 Aug. 2022, www.geeksforgeeks.org/linear-search-vs-binary-search/. Accessed 8 Sept. 2022.
 
 GeeksforGeeks. “Searching Algorithms.” GeeksforGeeks, www.geeksforgeeks.org/searching-algorithms/?ref=lbp. Accessed 8 Sept. 2022. 
 
