@@ -1,4 +1,4 @@
-# T1A2-Workbook
+# T2A1-Workbook
 ---
 
 ## Question 1: Identify and explain the workings of TWO sorting algorithms and discuss and compare their performance/efficiency (i.e. Big O)
@@ -148,11 +148,11 @@ The process repeats, ignoring the accurately swapped ``minimums`` as they are pl
 
 Bubble sort  has an inner and an outer loop which both need to iterate through ``n`` (size of list) number of times in the worst case. The outer loop varies as it has an escape that will stop the loop as soon as the array is sorted as intended.  This means that the outer loop has a worst case scenario of running O(n) amount of times and the best case scenario that it only needs to run once because the data was in the proper order to begin with. The inner loop performs O(n) times deterministically, so there is no variation. 
 
-This means that in the worst case scenario, both loops carry the Big-O notation of O(n).  When these are combined they come out to a big-O of O(n^2) (quadratic complexity).
+This means that in the worst case scenario, both loops carry the Big-O notation of O(n).  When these are combined they come out to a Big-O of O(n^2) (quadratic complexity).
 
 ``O(n x n) = O(n^2)``
 
-This also means that the best case scenario in which the data is already sorted, the outer loop would run once O(1) and the inner loop would run O(n), which, when combined, come out to a run time of O(n)  (linear complexity).
+This also means that in the best case scenario in which the data is already sorted, the outer loop would run once O(1) and the inner loop would run O(n). When combined, they come out to a run time of O(n)  (linear complexity).
 
 ``O(1 x n) = O(n)``
 
@@ -252,7 +252,7 @@ def binary_search(arr, x):
 
 <strong>First Iteration:</strong>
 
-The middle number of the array is found through the equation (0+4)//2 = 2, and it's value is ``6``. Since the value we are searching for is less than ``6``, the possible location of the desired value must be in the first half of the array. The high is then set to ``mid - 1`` and the loop starts over.
+The middle number of the array is found through the equation (0+4)//2 = 2, and its value is ``6``. Since the value we are searching for is less than ``6``, the possible location of the desired value must be in the first half of the array. The high is then set to ``mid - 1`` and the loop starts over.
 
 <br>
 
@@ -261,7 +261,7 @@ The middle number of the array is found through the equation (0+4)//2 = 2, and i
 The middle number of the first half of the array is found through the equation (0+1)//2 = 0, and its value is ``2``. The value ``2`` is less than the desired value, so the low is set to ``mid + 1`` and the loop starts over.
 
 <strong>Third Iteration:</strong>
-The middle number of the remaining values is found through the equation (1+2)//2 = 1, and its value is ``4``. The value ``4`` matches the desired value, so function returns the index value and the loop ends. 
+The middle number of the remaining values is found through the equation (1+2)//2 = 1, and its value is ``4``. The value ``4`` matches the desired value, so the function returns the index value and the loop ends. 
 
 ### <strong>Performance/Efficiency Comparison</strong>
 
@@ -282,7 +282,7 @@ Binary Search uses a single loop which halves the number of elements being searc
 
 <strong>*Conclusion:*</strong>
 
-Linear Search has linear complexity which is less efficient than Binary Search's logarithmic complexity. If the amount of items being searched is doubled, Linear Search would take twice as long to complete since it needs to possibly go through the entire list. However, in Binary Search, the amount being searched is halved after every loop, so it stays efficient even when more data is added.  A major perk to using Linear Search is that the list does nto have to be sorted in order for it to work, unlike Binary Search.
+Linear Search has linear complexity which is less efficient than Binary Search's logarithmic complexity. If the amount of items being searched is doubled, Linear Search would take twice as long to complete since it needs to possibly go through the entire list. However, in Binary Search, the amount being searched is halved after every loop, so it stays efficient even when more data is added.  A major perk to using Linear Search is that the list does not have to be sorted in order for it to work, unlike Binary Search.
 
 
  ## Works Cited:
